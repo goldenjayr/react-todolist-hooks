@@ -1,6 +1,8 @@
 import React, {useState, useRef} from 'react'
 
 import Button from '../components/button/Button'
+import Text from '../components/text/Text'
+import TextField from '../components/text-field/TextField';
 
 
 const App = () => {
@@ -45,7 +47,7 @@ const App = () => {
 
     const toggleEditFormHandler = (id) => {
         const isEditTaskSwitched = taskList.map(task => {
-            if(task.taskId === id) task.isEdit = true
+            if(task.taskId === id) task.isEdit = !task.isEdit
             return task
         })
         setTaskList(isEditTaskSwitched)
@@ -59,7 +61,9 @@ const App = () => {
     const editTaskHandler = (e, id) => {
         e.preventDefault()
         const editedTasks = taskList.map(task => {
-            if(task.taskId === id) task.taskName = editValue
+            if(task.taskId === id) {
+                task.taskName = editValue
+            }
             return task
         })
         setTaskList(editedTasks)
@@ -70,11 +74,13 @@ const App = () => {
     return(
         <div>
             <form onSubmit={addTaskHandler}>
-                <input 
-                type="text" 
-                placeholder="Add a task" 
-                ref={inputEl}
-                />
+                <TextField>
+                    <input 
+                    type="text" 
+                    placeholder="Add a task" 
+                    ref={inputEl}
+                    />
+                </TextField>            
                 <Button 
                 type="submit"
                 className="btn-primary"
@@ -85,20 +91,28 @@ const App = () => {
                     {taskList.map(task => {
                         return (
                             <li key={task.taskId}>
-                                {task.taskName}
-                                <button 
+                                <Text>{task.taskName}</Text>
+                                <Button 
                                     onClick={() => toggleEditFormHandler(task.taskId)}
-                                >Edit</button>
-                                <button
+                                    className="btn-secondary"
+                                >Edit</Button>
+                                <Button
                                     onClick={() => doneTaskHandler(task.taskId)}
-                                >Done</button>
-                                <button
+                                    className="btn-primary"
+                                >Done</Button>
+                                <Button
                                     onClick={() => deleteTaskHandler(task.taskId)}
-                                >Delete</button>
+                                    className="btn-danger"
+                                >Delete</Button>
                                 {task.isEdit === true && task.taskId === taskIdOnEdit &&
                                     <form onSubmit={(e) => editTaskHandler(e, task.taskId)}>
-                                        <input type="text" placeholder={task.taskName} value={editValue} onChange={onEditChangeHandler}/>
-                                        <button type="submit">Save</button>
+                                        <TextField>
+                                            <input type="text" placeholder={task.taskName} value={editValue} onChange={onEditChangeHandler}/>
+                                        </TextField>
+                                        <Button 
+                                        type="submit"
+                                        className="btn-primary"
+                                        >Save</Button>
                                     </form>
                                 }
                             </li>

@@ -1,14 +1,15 @@
 import React from 'react'
 import './button.scss'
 
-const Button = ({type, children, className}) => {
+const Button = (props) => {
+    const {className, children,  ...others} = props
 
     const btnType = className || ''
     const classes = `btn ${btnType}`
 
     return(
         <button 
-        type={type}
+        {...others}
         className={classes}
         >
             {children}

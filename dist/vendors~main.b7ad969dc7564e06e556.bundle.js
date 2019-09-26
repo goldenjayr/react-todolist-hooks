@@ -38410,9 +38410,9 @@ function (_BaseClient) {
 
 /***/ }),
 
-/***/ "./node_modules/webpack-dev-server/client/index.js?http://localhost:8080":
+/***/ "./node_modules/webpack-dev-server/client/index.js?http://localhost:3000":
 /*!*********************************************************!*\
-  !*** (webpack)-dev-server/client?http://localhost:8080 ***!
+  !*** (webpack)-dev-server/client?http://localhost:3000 ***!
   \*********************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
@@ -38594,7 +38594,7 @@ var onSocketMessage = {
   }
 };
 socket(socketUrl, onSocketMessage);
-/* WEBPACK VAR INJECTION */}.call(this, "?http://localhost:8080"))
+/* WEBPACK VAR INJECTION */}.call(this, "?http://localhost:3000"))
 
 /***/ }),
 
@@ -39381,4 +39381,4 @@ module.exports.formatError = function(err) {
 /***/ })
 
 }]);
-//# sourceMappingURL=vendors~main.js.map
+//# sourceMappingURL=vendors~main.b7ad969dc7564e06e556.bundle.js.js.map

@@ -1,0 +1,39 @@
+.btn {
+  padding: 1em 1.5em;
+  color: white;
+  border: none;
+  font-weight: 800;
+  border-radius: 10px;
+  margin: 5px; }
+  .btn:hover {
+    cursor: pointer; }
+  .btn-primary {
+    background-color: blueviolet; }
+    .btn-primary:hover {
+      background-color: mediumslateblue; }
+  .btn-danger {
+    background-color: #d50000; }
+    .btn-danger:hover {
+      background-color: #ff5131; }
+  .btn-secondary {
+    background-color: #388e3c; }
+    .btn-secondary-hover {
+      background-color: #6abf69; }
+
+.txt {
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: 700;
+  font-size: 1.5rem;
+  display: inline-block;
+  padding: 1rem 1.5rem;
+  margin: 5px; }
+
+.field {
+  display: inline-block; }
+
+.field > * {
+  padding: 0.5rem 1rem;
+  font-family: Arial, Helvetica, sans-serif; }
+
+
+/*# sourceMappingURL=main.de4b929dba7530c7b1c1.css.js.map*/

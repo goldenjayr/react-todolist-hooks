@@ -113,7 +113,7 @@
 /******/
 /******/ 	var hotApplyOnUpdate = true;
 /******/ 	// eslint-disable-next-line no-unused-vars
-/******/ 	var hotCurrentHash = "a1f2e581a46b69176201";
+/******/ 	var hotCurrentHash = "b7ad969dc7564e06e556";
 /******/ 	var hotRequestTimeout = 10000;
 /******/ 	var hotCurrentModuleData = {};
 /******/ 	var hotCurrentChildModule;
@@ -875,6 +875,28 @@
 
 /***/ }),
 
+/***/ "./node_modules/mini-css-extract-plugin/dist/loader.js!./node_modules/css-loader/dist/cjs.js!./node_modules/postcss-loader/src/index.js!./node_modules/sass-loader/dist/cjs.js!./src/components/text-field/text-field.scss":
+/*!************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/mini-css-extract-plugin/dist/loader.js!./node_modules/css-loader/dist/cjs.js!./node_modules/postcss-loader/src!./node_modules/sass-loader/dist/cjs.js!./src/components/text-field/text-field.scss ***!
+  \************************************************************************************************************************************************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+// extracted by mini-css-extract-plugin
+
+/***/ }),
+
+/***/ "./node_modules/mini-css-extract-plugin/dist/loader.js!./node_modules/css-loader/dist/cjs.js!./node_modules/postcss-loader/src/index.js!./node_modules/sass-loader/dist/cjs.js!./src/components/text/text.scss":
+/*!************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/mini-css-extract-plugin/dist/loader.js!./node_modules/css-loader/dist/cjs.js!./node_modules/postcss-loader/src!./node_modules/sass-loader/dist/cjs.js!./src/components/text/text.scss ***!
+  \************************************************************************************************************************************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+// extracted by mini-css-extract-plugin
+
+/***/ }),
+
 /***/ "./node_modules/webpack/hot sync ^\\.\\/log$":
 /*!*************************************************!*\
   !*** (webpack)/hot sync nonrecursive ^\.\/log$ ***!
@@ -921,19 +943,25 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var _button_scss__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./button.scss */ "./src/components/button/button.scss");
 /* harmony import */ var _button_scss__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_button_scss__WEBPACK_IMPORTED_MODULE_1__);
+function _extends() { _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return _extends.apply(this, arguments); }
+
+function _objectWithoutProperties(source, excluded) { if (source == null) return {}; var target = _objectWithoutPropertiesLoose(source, excluded); var key, i; if (Object.getOwnPropertySymbols) { var sourceSymbolKeys = Object.getOwnPropertySymbols(source); for (i = 0; i < sourceSymbolKeys.length; i++) { key = sourceSymbolKeys[i]; if (excluded.indexOf(key) >= 0) continue; if (!Object.prototype.propertyIsEnumerable.call(source, key)) continue; target[key] = source[key]; } } return target; }
+
+function _objectWithoutPropertiesLoose(source, excluded) { if (source == null) return {}; var target = {}; var sourceKeys = Object.keys(source); var key, i; for (i = 0; i < sourceKeys.length; i++) { key = sourceKeys[i]; if (excluded.indexOf(key) >= 0) continue; target[key] = source[key]; } return target; }
 
 
 
-var Button = function Button(_ref) {
-  var type = _ref.type,
-      children = _ref.children,
-      className = _ref.className;
+
+var Button = function Button(props) {
+  var className = props.className,
+      children = props.children,
+      others = _objectWithoutProperties(props, ["className", "children"]);
+
   var btnType = className || '';
   var classes = "btn ".concat(btnType);
-  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
-    type: type,
+  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", _extends({}, others, {
     className: classes
-  }, children);
+  }), children);
 };
 
 /* harmony default export */ __webpack_exports__["default"] = (Button);
@@ -987,6 +1015,152 @@ if (true) {
 
 /***/ }),
 
+/***/ "./src/components/text-field/TextField.js":
+/*!************************************************!*\
+  !*** ./src/components/text-field/TextField.js ***!
+  \************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _text_field_scss__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./text-field.scss */ "./src/components/text-field/text-field.scss");
+/* harmony import */ var _text_field_scss__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_text_field_scss__WEBPACK_IMPORTED_MODULE_1__);
+
+
+
+var TextField = function TextField(props) {
+  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "field"
+  }, props.children);
+};
+
+/* harmony default export */ __webpack_exports__["default"] = (TextField);
+
+/***/ }),
+
+/***/ "./src/components/text-field/text-field.scss":
+/*!***************************************************!*\
+  !*** ./src/components/text-field/text-field.scss ***!
+  \***************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+var content = __webpack_require__(/*! !../../../node_modules/mini-css-extract-plugin/dist/loader.js!../../../node_modules/css-loader/dist/cjs.js!../../../node_modules/postcss-loader/src!../../../node_modules/sass-loader/dist/cjs.js!./text-field.scss */ "./node_modules/mini-css-extract-plugin/dist/loader.js!./node_modules/css-loader/dist/cjs.js!./node_modules/postcss-loader/src/index.js!./node_modules/sass-loader/dist/cjs.js!./src/components/text-field/text-field.scss");
+
+if (typeof content === 'string') {
+  content = [[module.i, content, '']];
+}
+
+var options = {}
+
+options.insert = "head";
+options.singleton = false;
+
+var update = __webpack_require__(/*! ../../../node_modules/style-loader/dist/runtime/injectStylesIntoStyleTag.js */ "./node_modules/style-loader/dist/runtime/injectStylesIntoStyleTag.js")(content, options);
+
+if (content.locals) {
+  module.exports = content.locals;
+}
+
+if (true) {
+  if (!content.locals) {
+    module.hot.accept(
+      /*! !../../../node_modules/mini-css-extract-plugin/dist/loader.js!../../../node_modules/css-loader/dist/cjs.js!../../../node_modules/postcss-loader/src!../../../node_modules/sass-loader/dist/cjs.js!./text-field.scss */ "./node_modules/mini-css-extract-plugin/dist/loader.js!./node_modules/css-loader/dist/cjs.js!./node_modules/postcss-loader/src/index.js!./node_modules/sass-loader/dist/cjs.js!./src/components/text-field/text-field.scss",
+      function () {
+        var newContent = __webpack_require__(/*! !../../../node_modules/mini-css-extract-plugin/dist/loader.js!../../../node_modules/css-loader/dist/cjs.js!../../../node_modules/postcss-loader/src!../../../node_modules/sass-loader/dist/cjs.js!./text-field.scss */ "./node_modules/mini-css-extract-plugin/dist/loader.js!./node_modules/css-loader/dist/cjs.js!./node_modules/postcss-loader/src/index.js!./node_modules/sass-loader/dist/cjs.js!./src/components/text-field/text-field.scss");
+
+        if (typeof newContent === 'string') {
+          newContent = [[module.i, newContent, '']];
+        }
+        
+        update(newContent);
+      }
+    )
+  }
+
+  module.hot.dispose(function() { 
+    update();
+  });
+}
+
+/***/ }),
+
+/***/ "./src/components/text/Text.js":
+/*!*************************************!*\
+  !*** ./src/components/text/Text.js ***!
+  \*************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _text_scss__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./text.scss */ "./src/components/text/text.scss");
+/* harmony import */ var _text_scss__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_text_scss__WEBPACK_IMPORTED_MODULE_1__);
+
+
+
+var Text = function Text(props) {
+  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "txt"
+  }, props.children);
+};
+
+/* harmony default export */ __webpack_exports__["default"] = (Text);
+
+/***/ }),
+
+/***/ "./src/components/text/text.scss":
+/*!***************************************!*\
+  !*** ./src/components/text/text.scss ***!
+  \***************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+var content = __webpack_require__(/*! !../../../node_modules/mini-css-extract-plugin/dist/loader.js!../../../node_modules/css-loader/dist/cjs.js!../../../node_modules/postcss-loader/src!../../../node_modules/sass-loader/dist/cjs.js!./text.scss */ "./node_modules/mini-css-extract-plugin/dist/loader.js!./node_modules/css-loader/dist/cjs.js!./node_modules/postcss-loader/src/index.js!./node_modules/sass-loader/dist/cjs.js!./src/components/text/text.scss");
+
+if (typeof content === 'string') {
+  content = [[module.i, content, '']];
+}
+
+var options = {}
+
+options.insert = "head";
+options.singleton = false;
+
+var update = __webpack_require__(/*! ../../../node_modules/style-loader/dist/runtime/injectStylesIntoStyleTag.js */ "./node_modules/style-loader/dist/runtime/injectStylesIntoStyleTag.js")(content, options);
+
+if (content.locals) {
+  module.exports = content.locals;
+}
+
+if (true) {
+  if (!content.locals) {
+    module.hot.accept(
+      /*! !../../../node_modules/mini-css-extract-plugin/dist/loader.js!../../../node_modules/css-loader/dist/cjs.js!../../../node_modules/postcss-loader/src!../../../node_modules/sass-loader/dist/cjs.js!./text.scss */ "./node_modules/mini-css-extract-plugin/dist/loader.js!./node_modules/css-loader/dist/cjs.js!./node_modules/postcss-loader/src/index.js!./node_modules/sass-loader/dist/cjs.js!./src/components/text/text.scss",
+      function () {
+        var newContent = __webpack_require__(/*! !../../../node_modules/mini-css-extract-plugin/dist/loader.js!../../../node_modules/css-loader/dist/cjs.js!../../../node_modules/postcss-loader/src!../../../node_modules/sass-loader/dist/cjs.js!./text.scss */ "./node_modules/mini-css-extract-plugin/dist/loader.js!./node_modules/css-loader/dist/cjs.js!./node_modules/postcss-loader/src/index.js!./node_modules/sass-loader/dist/cjs.js!./src/components/text/text.scss");
+
+        if (typeof newContent === 'string') {
+          newContent = [[module.i, newContent, '']];
+        }
+        
+        update(newContent);
+      }
+    )
+  }
+
+  module.hot.dispose(function() { 
+    update();
+  });
+}
+
+/***/ }),
+
 /***/ "./src/containers/App.js":
 /*!*******************************!*\
   !*** ./src/containers/App.js ***!
@@ -999,6 +1173,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var _components_button_Button__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../components/button/Button */ "./src/components/button/Button.js");
+/* harmony import */ var _components_text_Text__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../components/text/Text */ "./src/components/text/Text.js");
+/* harmony import */ var _components_text_field_TextField__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../components/text-field/TextField */ "./src/components/text-field/TextField.js");
 function _toConsumableArray(arr) { return _arrayWithoutHoles(arr) || _iterableToArray(arr) || _nonIterableSpread(); }
 
 function _nonIterableSpread() { throw new TypeError("Invalid attempt to spread non-iterable instance"); }
@@ -1014,6 +1190,8 @@ function _nonIterableRest() { throw new TypeError("Invalid attempt to destructur
 function _iterableToArrayLimit(arr, i) { if (!(Symbol.iterator in Object(arr) || Object.prototype.toString.call(arr) === "[object Arguments]")) { return; } var _arr = []; var _n = true; var _d = false; var _e = undefined; try { for (var _i = arr[Symbol.iterator](), _s; !(_n = (_s = _i.next()).done); _n = true) { _arr.push(_s.value); if (i && _arr.length === i) break; } } catch (err) { _d = true; _e = err; } finally { try { if (!_n && _i["return"] != null) _i["return"](); } finally { if (_d) throw _e; } } return _arr; }
 
 function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
+
+
 
 
 
@@ -1075,7 +1253,7 @@ var App = function App() {
 
   var toggleEditFormHandler = function toggleEditFormHandler(id) {
     var isEditTaskSwitched = taskList.map(function (task) {
-      if (task.taskId === id) task.isEdit = true;
+      if (task.taskId === id) task.isEdit = !task.isEdit;
       return task;
     });
     setTaskList(isEditTaskSwitched);
@@ -1089,7 +1267,10 @@ var App = function App() {
   var editTaskHandler = function editTaskHandler(e, id) {
     e.preventDefault();
     var editedTasks = taskList.map(function (task) {
-      if (task.taskId === id) task.taskName = editValue;
+      if (task.taskId === id) {
+        task.taskName = editValue;
+      }
+
       return task;
     });
     setTaskList(editedTasks);
@@ -1099,39 +1280,43 @@ var App = function App() {
 
   return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("form", {
     onSubmit: addTaskHandler
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_text_field_TextField__WEBPACK_IMPORTED_MODULE_3__["default"], null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
     type: "text",
     placeholder: "Add a task",
     ref: inputEl
-  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_button_Button__WEBPACK_IMPORTED_MODULE_1__["default"], {
+  })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_button_Button__WEBPACK_IMPORTED_MODULE_1__["default"], {
     type: "submit",
     className: "btn-primary"
   }, "Add")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("ul", null, taskList.map(function (task) {
     return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
       key: task.taskId
-    }, task.taskName, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
+    }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_text_Text__WEBPACK_IMPORTED_MODULE_2__["default"], null, task.taskName), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_button_Button__WEBPACK_IMPORTED_MODULE_1__["default"], {
       onClick: function onClick() {
         return toggleEditFormHandler(task.taskId);
-      }
-    }, "Edit"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
+      },
+      className: "btn-secondary"
+    }, "Edit"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_button_Button__WEBPACK_IMPORTED_MODULE_1__["default"], {
       onClick: function onClick() {
         return doneTaskHandler(task.taskId);
-      }
-    }, "Done"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
+      },
+      className: "btn-primary"
+    }, "Done"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_button_Button__WEBPACK_IMPORTED_MODULE_1__["default"], {
       onClick: function onClick() {
         return deleteTaskHandler(task.taskId);
-      }
+      },
+      className: "btn-danger"
     }, "Delete"), task.isEdit === true && task.taskId === taskIdOnEdit && react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("form", {
       onSubmit: function onSubmit(e) {
         return editTaskHandler(e, task.taskId);
       }
-    }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
+    }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_text_field_TextField__WEBPACK_IMPORTED_MODULE_3__["default"], null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
       type: "text",
       placeholder: task.taskName,
       value: editValue,
       onChange: onEditChangeHandler
-    }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
-      type: "submit"
+    })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_button_Button__WEBPACK_IMPORTED_MODULE_1__["default"], {
+      type: "submit",
+      className: "btn-primary"
     }, "Save")));
   }))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, "Acomplished Task: ", doneTaskCount));
 };
@@ -1163,12 +1348,12 @@ react_dom__WEBPACK_IMPORTED_MODULE_1___default.a.render(react__WEBPACK_IMPORTED_
 
 /***/ 0:
 /*!*************************************************************************************************!*\
-  !*** multi (webpack)-dev-server/client?http://localhost:8080 (webpack)/hot/dev-server.js ./src ***!
+  !*** multi (webpack)-dev-server/client?http://localhost:3000 (webpack)/hot/dev-server.js ./src ***!
   \*************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(/*! /home/developer/Documents/jayr/projects/my-todolist-react/node_modules/webpack-dev-server/client/index.js?http://localhost:8080 */"./node_modules/webpack-dev-server/client/index.js?http://localhost:8080");
+__webpack_require__(/*! /home/developer/Documents/jayr/projects/my-todolist-react/node_modules/webpack-dev-server/client/index.js?http://localhost:3000 */"./node_modules/webpack-dev-server/client/index.js?http://localhost:3000");
 __webpack_require__(/*! /home/developer/Documents/jayr/projects/my-todolist-react/node_modules/webpack/hot/dev-server.js */"./node_modules/webpack/hot/dev-server.js");
 module.exports = __webpack_require__(/*! ./src */"./src/index.js");
 
@@ -1176,4 +1361,4 @@ module.exports = __webpack_require__(/*! ./src */"./src/index.js");
 /***/ })
 
 /******/ });
-//# sourceMappingURL=main.js.map
+//# sourceMappingURL=main.b7ad969dc7564e06e556.bundle.js.js.map

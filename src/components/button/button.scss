@@ -1,5 +1,36 @@
 .btn {
-    padding: 1em 2em;
+    padding: 1em 1.5em;
     color: white;
-    background-color: aqua;
+    border: none;
+    font-weight: 800;
+    border-radius: 10px;
+    margin: 5px;
+
+    &:hover {
+        cursor: pointer;
+    }
+    
+    &-primary {
+        background-color: blueviolet;
+
+        &:hover {
+            background-color: mediumslateblue;
+        }
+    }
+
+    &-danger {
+        background-color: #d50000;
+
+        &:hover {
+            background-color: #ff5131;
+        }
+    }
+
+    &-secondary {
+        background-color: #388e3c;
+
+        &-hover {
+            background-color: #6abf69;
+        }
+    }
 }

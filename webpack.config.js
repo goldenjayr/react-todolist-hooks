@@ -13,7 +13,7 @@ module.exports = {
     output: {
         path: path.resolve(__dirname, 'dist'),
         filename: '[name].[hash].bundle.js',
-        sourceMapFilename: '[name].js.map'
+        sourceMapFilename: '[file].js.map'
     },
     module: {
         rules: [
@@ -36,7 +36,7 @@ module.exports = {
         ]
     },
     devServer: {
-        port: 8080,
+        port: 3000,
         writeToDisk: true,
         hot: true
     },
@@ -56,6 +56,8 @@ module.exports = {
         new BundleAnalyzerPlugin({
             openAnalyzer: false
         }),
-        new MiniCssExtractPlugin()
+        new MiniCssExtractPlugin({
+            filename: '[name].[chunkhash].css'
+        })
     ]
 }
